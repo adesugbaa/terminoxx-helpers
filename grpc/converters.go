@@ -7,6 +7,23 @@ import (
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
 
+func GetFloat32Value(value *float32) *wrapperspb.FloatValue {
+	if value == nil {
+		return nil
+	}
+
+	return wrapperspb.Float(*value)
+}
+
+func GetFloat32(value *wrapperspb.FloatValue) *float32 {
+	if value == nil {
+		return nil
+	}
+
+	newValue := value.Value
+	return &newValue
+}
+
 func GetDoubleValue(value *float64) *wrapperspb.DoubleValue {
 	if value == nil {
 		return nil
