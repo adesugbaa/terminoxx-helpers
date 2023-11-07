@@ -1,4 +1,4 @@
-module github.com/adesugbaa/helpers
+module github.com/adesugbaa/terminoxx-helpers
 
 go 1.21.3
 
