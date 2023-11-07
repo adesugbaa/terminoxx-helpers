@@ -41,6 +41,23 @@ func GetInt32(value *wrapperspb.Int32Value) *int32 {
 	return &newValue
 }
 
+func GetInt64Value(value *int64) *wrapperspb.Int64Value {
+	if value == nil {
+		return nil
+	}
+
+	return wrapperspb.Int64(*value)
+}
+
+func GetInt64(value *wrapperspb.Int64Value) *int64 {
+	if value == nil {
+		return nil
+	}
+
+	newValue := value.Value
+	return &newValue
+}
+
 func GetStringValue(value *string) *wrapperspb.StringValue {
 	if value == nil {
 		return nil
